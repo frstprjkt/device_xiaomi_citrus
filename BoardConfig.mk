@@ -19,5 +19,11 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_citrus
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_citrus
 
+# Kernel - Prebuilt images
+#BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+
 # Inherit from the proprietary version
 include vendor/xiaomi/citrus/BoardConfigVendor.mk
