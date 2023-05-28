@@ -29,6 +29,10 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Kernel modules
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)-kernel/vendor-modules,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
+
 # Overlays
 PRODUCT_PACKAGES += \
     CitrusFrameworksOverlay \
