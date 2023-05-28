@@ -19,6 +19,13 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CitrusFrameworksOverlay \
+    CitrusSystemUIOverlay \
+    CitrusWifiOverlay \
+    SettingsProviderM2010J19CGOverlay
+
 # Inherit from sm6115-common
 $(call inherit-product, device/xiaomi/sm6115-common/bengal.mk)
 
