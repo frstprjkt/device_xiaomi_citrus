@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "SettingsProviderResCitrus",
+    sdk_version: "current",
+    product_specific: true
+}
